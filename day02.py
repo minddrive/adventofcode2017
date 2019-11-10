@@ -6,10 +6,11 @@ Day 2 of the Advent Of Code 2017 challenge
 See http://adventofcode.com/2017/day/2 for details
 """
 
+from get_input import get_input
+
 
 # Read in data as an array of string of a list of integers
-with open('input/day02.txt') as fh:
-    data = fh.read().strip().split('\n')
+data = get_input().split('\n')
 
 
 def get_checkum(divides=False):
@@ -21,6 +22,8 @@ def get_checkum(divides=False):
 
     If so, checksum is the sum of the divisions of the two numbers
     that divide each other evenly in each line (only one pair)
+
+    Returns the checksum
     """
 
     checksum = 0
